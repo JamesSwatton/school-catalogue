@@ -21,7 +21,7 @@ class School {
         }
     }
     quickFacts() {
-        console.log(`${this.name} educates ${this.numberOfStudents} at the ${this.level} school level.`);
+        console.log(`${this.name} educates ${this.numberOfStudents} students at the ${this.level} school level.`);
     }
     static pickSubstituteTeacher(substituteTeachers) {
         const randomIndex = Math.floor(Math.random() * substituteTeachers.length);
@@ -51,3 +51,13 @@ class HighSchool extends School {
 
 
 const lorraineHansbury = new PrimarySchool('Lorraine Hansbury', 514, 'Students must be picked up by a parent, guardian, or a family member over the age of 13');
+
+lorraineHansbury.quickFacts();
+
+console.log( School.pickSubstituteTeacher(['Jamal Crawford', 'Lou Williams', 'J. R. Smith', 'James Harden', 'Jason Terry', 'Manu Ginobli']));
+
+
+const alSmith = new HighSchool('Al E. Smith', 415, ['Baseball', 'Vollyball', 'Track and Field']);
+
+console.log( alSmith.sportsTeams );
+
